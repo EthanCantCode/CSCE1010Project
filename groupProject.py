@@ -26,6 +26,8 @@ elif aiRandom == 2:
 else:
     print(aiRandom)
 
+#Test
+
 
 
 print(f"AI went {aiMove}")
