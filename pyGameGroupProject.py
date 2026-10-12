@@ -1,7 +1,7 @@
 #CSCE 1010
 #Names: Ethan Trombley, Kallen Schulz, Dabin Choi
 
-#This file is just for fun
+#This file is just for fun make sure to set aspect ratio to 1000,800
 
 import pygame
 
