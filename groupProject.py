@@ -25,9 +25,12 @@ while game == True:
     print("Please select one")
     print("1: Rock\n2: Paper\n3: Scissors")
 
+
+    #intSelect (Integer Selection) is to check to make sure the player enters a valid input
     intSelect = True
     while intSelect == True:
 
+        #Try catch statment to make sure to not break the code if the player enters a string variable
         try:
 
             pSelect = int(input("Type your selection here: "))
@@ -42,18 +45,15 @@ while game == True:
                 break
             else:
                 print("\nPlease select a valid input (1, 2 or 3)\n")        
-                    
-
         except ValueError:
             print("\nPlease select a number\n")
-
-        
+      
 
     print(f"\nYou selected {playerMove}")
     
 
 
-    #AI move
+    #AI move is determined by a random selection of numbers ranging 0-2
     aiRandom = random.randint(0,2)
 
     if aiRandom == 0:
@@ -68,7 +68,7 @@ while game == True:
     print(f"AI selected {aiMove}\n")
 
 
+    #We need to make a section that checks who wins
 
 
 
-print(f"AI went {aiMove}")
