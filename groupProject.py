@@ -8,6 +8,7 @@ import random
 #Variables
 aiPoints = 0
 playerPoints = 0
+targetPoints = 3
 
 #Array
 moveSet = ["Rock", "Paper", "Scissors"]
@@ -35,13 +36,13 @@ while game == True:
 
             pSelect = int(input("Type your selection here: "))
             if pSelect == 1:
-                playerMove == moveSet[0]
+                playerMove = moveSet[0]
                 break
             elif pSelect == 2:
-                playerMove == moveSet[1]
+                playerMove = moveSet[1]
                 break
             elif pSelect == 3:
-                playerMove == moveSet[2]
+                playerMove = moveSet[2]
                 break
             else:
                 print("\nPlease select a valid input (1, 2 or 3)\n")        
@@ -69,6 +70,30 @@ while game == True:
 
 
     #We need to make a section that checks who wins
+    if playerMove == aiMove:
+        print("It's a tie!\n")
+    elif playerMove == "Rock" and aiMove == "Scissors":
+        print("You win!\n")
+        playerPoints += 1
+    elif playerMove == "Paper" and aiMove == "Rock":
+        print("You win!\n")
+        playerPoints += 1
+    elif playerMove == "Scissors" and aiMove == "Paper":
+        print("You win!\n")
+        playerPoints += 1
+    else:
+        print("You lose!\n")
+        aiPoints += 1
+    print(f"Your points: {playerPoints}\nAI points: {aiPoints}\n")
 
+    if playerPoints == targetPoints:
+        print("You win the game!")
+        game = False
+        break
+
+    elif aiPoints == targetPoints:
+        print("You lose the game!")
+        game = False
+        break
 
 
